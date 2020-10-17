@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Events(event) {
+export default function Events(props) {
+const { event } = props;
 
-  console.log(event.event.id);
   
   return (
     <div>
-
+       { event.map( (e, idx) => <p key={idx}>{e.activity}</p>) }
     </div>
   )
 }
