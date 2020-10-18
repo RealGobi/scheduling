@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Meetings from './Components/Meetings';
-import Meeting from './Components/Meeting';
+import MeetingDetail from './Components/MeetingDetail';
 import Header from './Components/Header';
 import AddMeeting from './Components/AddMeeting';
 
@@ -16,7 +16,7 @@ function App() {
           <Route path='/' exact 
           component={Meetings} />
           <Route path='/meeting/:id' 
-          component={Meeting} />
+          component={MeetingDetail} />
           <Route path='/add-meeting'
           component={AddMeeting} />
         </Switch>
