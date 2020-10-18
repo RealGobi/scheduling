@@ -8,7 +8,7 @@ const { event } = props;
   
   return (
     <div>
-       { event.map( (e, idx) => <div key={idx}><p>{e.activity}</p></div>) }
+       { event.map( (e, idx) => <div className='event-box' key={idx}><p>{e.activity}</p></div>) }
     </div>
   )
 }
