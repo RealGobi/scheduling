@@ -1,9 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
+
+import './header.css';
+
 
 export default function Header() {
+
+  const linkStyle = {
+    textDecoration: "none"
+  }
+
   return (
-    <div>
-      
+    <div className='header'>
+      <h1>Meetings for Jimmy</h1>
+      <span className='container-btn'>
+        <Link style={linkStyle}  to='/'>
+          <Button id='button' variant="contained" color="primary" >Meeting</Button>
+        </Link>
+        <Link style={linkStyle}  to='/add-meeting'>
+         <Button variant="contained" color="primary" >Add meeting</Button>
+        </Link>
+      </span>
     </div>
   )
 }

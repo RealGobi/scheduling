@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Events from './Components/Events';
+import Meetings from './Components/Meetings';
+import Meeting from './Components/Meeting';
+import Header from './Components/Header';
+import AddMeeting from './Components/AddMeeting';
 
 function App() {
-  // state 
-  const [events, setEvents] = useState([]);
-  const url = 'https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list';
-console.log(events);
-
-
-  // useEffect to fetch event data
-  useEffect(() => {   
-    const fetchData = async () => {
-        const response = await fetch(url); 
-        const data = await response.json();
-        setEvents(data);
-      }
-      fetchData();
-  }, []);
-
-  
   
   return (
-    <div className="App">
-      <Events event={events} />
-    </div>
+    <Router>
+      <div className="App">
+        <Header className='header' />
+        <Switch>
+          <Route path='/' exact 
+          component={Meetings} />
+          <Route path='/meeting/:id' 
+          component={Meeting} />
+          <Route path='/add-meeting'
+          component={AddMeeting} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

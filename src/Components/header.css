@@ -1,0 +1,22 @@
+.header {
+  width: 90vw;
+  height: 100px;
+  background: #AACBA7;
+  border-radius: 4px;
+  font-family: Roboto;
+  color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container-btn {
+  position: absolute;
+  right: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+#button {
+  margin-bottom: 5px;
+}

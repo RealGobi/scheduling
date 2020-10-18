@@ -1,0 +1,19 @@
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.meetings-box {
+    margin: 5px;
+    width: 150px;
+    height: 250px;
+    background: #E2D7D7;
+    border: 2px solid rgba(17, 17, 17, 0.41);   
+    border-radius: 4px;
+}
+
+.link {
+    color:black;
+    text-transform: none;
+}
