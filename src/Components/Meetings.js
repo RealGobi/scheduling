@@ -18,7 +18,6 @@ export default function Meetings() {
         const data = await response.json();
         setMeetings(data);
       }
-console.log(meetings);
 
 const linkStyle = {
   textDecoration: "none",
