@@ -26,7 +26,7 @@ const linkStyle = {
 
   return (
     <div className='container'>
-       { meetings.map( (meeting, idx) => (
+       { meetings.sort((a,b)=> a.startDate > b.startDate ? 1 : -1).map( (meeting, idx) => (
          <Link style={linkStyle} key={idx} to={`/meeting/${meeting._id}`}>
             <div className='meetings-box'>
               <p>Plats: {meeting.location}</p>
