@@ -19,10 +19,10 @@ export default function Meetings() {
         setMeetings(data);
       }
 
-const linkStyle = {
-  textDecoration: "none",
-  color: '#111111'
-}
+      const linkStyle = {
+        textDecoration: "none",
+        color: '#111111'
+      }
 
   return (
     <div className='container'>
