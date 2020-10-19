@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '@material-ui/core';
+
 import './addMeeting.css';
 
 export default function AddMeeting() {
 
+  const [location, setLocation] = useState('');
+  const [activity, setActivity] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
