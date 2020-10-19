@@ -16,10 +16,10 @@ export default function AddMeeting() {
     headers: { "Content-Type": "application/json; charset=utf-8" },
     method: 'POST',
     body: JSON.stringify({
-      location,
       activity,
       startDate,
-      endDate
+      endDate,
+      location
     })
   })
   .then(response => response.json())
