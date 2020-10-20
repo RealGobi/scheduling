@@ -16,16 +16,6 @@ form {
   flex-direction: column;
 }
 
-.date-info-text {
-  font-size: .5rem;
-  font-style: italic;
-}
-
 #btn-submit {
   margin-top: 20px;
-}
-
-input {
-  border-radius: 5px;
-  border: 1px solid gray;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Meetings from './Components/Meetings';
-import MeetingDetail from './Components/MeetingDetail';
-import Header from './Components/Header';
-import AddMeeting from './Components/AddMeeting';
+import Meetings from './views/Meetings';
+import MeetingDetail from './views/MeetingDetail';
+import Header from './components/Header';
+import AddMeeting from './views/AddMeeting';
 
 function App() {
   

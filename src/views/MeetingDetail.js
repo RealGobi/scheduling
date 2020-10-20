@@ -35,7 +35,7 @@ fetch(`https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list/${id
     method: 'DELETE'
   })
   .then(response => console.log(response))
-  history.push("/") // 
+  history.push("/"); 
 }
   
 return (
