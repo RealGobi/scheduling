@@ -17,7 +17,7 @@ export default function Header() {
         <h1>Meetings for Jimmy</h1>
         <span className='container-btn'>
           <Link style={linkStyle}  to='/'>
-            <Button id='button' variant="contained" color="primary" >Meeting</Button>
+            <Button id='button' variant="contained" color="primary" >Meetings</Button>
           </Link>
           <Link style={linkStyle}  to='/add-meeting'>
           <Button variant="contained" color="primary" >Add meeting</Button>
