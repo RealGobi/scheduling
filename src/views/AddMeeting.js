@@ -53,7 +53,7 @@ export default function AddMeeting() {
         <FormInput 
           id='startDate'
           lableFor='startDate'
-          lableInput='Startdatum och tid:' 
+          lableInput='Startdatum:' 
           pTag='(YYYY-MM-DD HH:MM)' 
           classNamePTag='date-info-text' 
           typeInput='text' 
@@ -63,7 +63,7 @@ export default function AddMeeting() {
         <FormInput 
           id='endDate'
           lableFor='endDate'
-          lableInput='Slutdatum och tid:' 
+          lableInput='Slutdatum:' 
           pTag='(YYYY-MM-DD HH:MM)' 
           classNamePTag='date-info-text' 
           typeInput='text' 

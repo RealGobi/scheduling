@@ -38,7 +38,8 @@ return (
   <Card variant="outlined" className='card'>
       <p>Plats: {meetingDetails.location}</p>
       <p>Aktivitet: {meetingDetails.activity}</p>
-      <p>Datum och tid: {meetingDetails.startDate} - {meetingDetails.endDate}</p>
+      <p>Startdatum: {meetingDetails.startDate}</p>
+      <p>Slutdatum: {meetingDetails.endDate}</p>
   </Card>
   <Button fullWidth onClick={() => deleteClick(meetingDetails._id)}variant="contained" color="secondary">Delete</Button>
 </div>

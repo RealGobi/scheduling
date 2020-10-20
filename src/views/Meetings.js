@@ -31,7 +31,8 @@ export default function Meetings() {
             <Card variant="outlined" className='card' id='card'>
               <p>Plats: {meeting.location}</p>
               <p>Aktivitet: {meeting.activity}</p>
-              <p>Datum och tid: {meeting.startDate} - {meeting.endDate}</p>
+              <p>Startdatum: {meeting.startDate}</p>
+              <p>Slutdatum: {meeting.endDate}</p>
             </Card>
           </Link>
             )) }

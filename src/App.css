@@ -17,7 +17,7 @@ align-items: center;
 .container {
   display: grid;
   grid-template-columns: repeat(3, 250px);
-  grid-template-rows: repeat(3, 125px);
+  grid-template-rows: repeat(3, 150px);
   gap: 10px 5px;
 }
 
