@@ -1,10 +1,20 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import Header from './Header';
+import { render, fireEvent } from '@testing-library/react';
+import  Header  from './Header';
 
 
-test('renders header', () => {
+
+test('render header component correct', () => {
   const { getByText } = render(<Header />);
-  const text = getByText(/Meetings for/i);
-  expect(text).toBeInTheDocument();
+
+  getByText("Meetings for Jimmy");
+  getByText("Meetings");
+  getByText("Add meeting");
 });
+
+test('buttons in header', () => {
+  const { getByText } = render(<Header />);
+
+  fireEvent.click(getByText("Meetings"));
+  fireEvent.click(getByText("Add meeting"));
+})
