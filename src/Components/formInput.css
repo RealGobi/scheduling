@@ -1,0 +1,9 @@
+.date-info-text {
+  font-size: .5rem;
+  font-style: italic;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid gray;
+}
