@@ -1,9 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import Header from './Header';
 
 
-it('render witout crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Header></Header>, div);
+test('renders header', () => {
+  const { getByText } = render(<Header />);
+  const text = getByText(/Meetings for/i);
+  expect(text).toBeInTheDocument();
 });
