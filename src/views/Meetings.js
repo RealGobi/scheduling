@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { fetchData } from '../components/ApiCalls';
 import { Link } from 'react-router-dom';
 import { Card } from '@material-ui/core';
 
@@ -6,25 +7,22 @@ import './meetings.css';
 
 export default function Meetings() {
 
-   // state 
-   const [meetings, setMeetings] = useState([]);
-   const url = 'https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list';
- 
-   // useEffect to fetch event data
-   useEffect(() => {   
-     fetchData();
-    }, []);
-    
-    const fetchData = async () => {
-        const response = await fetch(url); 
-        const data = await response.json();
-        setMeetings(data);
-      }
+  const [meetings, setMeetings] = useState([]);
+  const url = 'https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list';
 
-      const linkStyle = {
-        textDecoration: "none",
-        color: '#111111'
-      }
+  useEffect(() => {
+    getData();
+  }, [])
+
+  const getData = async () =>{
+    const data = await fetchData(url);
+    setMeetings(data);
+  }
+
+  const linkStyle = {
+    textDecoration: "none",
+    color: '#111111'
+  }
 
   return (
     <div className='container'>

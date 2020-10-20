@@ -1,9 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import { useHistory } from "react-router-dom";
-
+import { fetchData } from '../components/ApiCalls';
 import PropTypes from 'prop-types';
 import { Button, Card } from '@material-ui/core';
-
 
 import './meetingDetail.css';
 
@@ -15,17 +14,13 @@ const [meetingDetails, setMeetingDeails] = useState({});
 const url = `https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list/${match.params.id}`;
 const history = useHistory();
 
-// useEffect to fetch event data
 useEffect(() => {   
-  fetchData();
+  getData();
 }, []);
 
-const fetchData = async () => {
-    const response = await fetch(url); 
-    const data = await response.json();
-    console.log(data);
-    
-    setMeetingDeails(data);
+const getData = async () =>{
+  const data = await fetchData(url);
+  setMeetingDeails(data);
 }
 
 // delete
