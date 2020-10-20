@@ -12,7 +12,7 @@ export default function Header() {
   }
 
   return (
-    <div className='header'>
+    <div data-testid='header-card' className='header'>
       <h1>Meetings for Jimmy</h1>
       <span className='container-btn'>
         <Link style={linkStyle}  to='/'>
