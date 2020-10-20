@@ -1,19 +1,26 @@
 
 .container {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 125px);
+    gap: 10px 5px;
 }
 
-.meetings-box {
-    margin: 5px;
-    width: 150px;
-    height: 250px;
+#card {
     background: #E2D7D7;
-    border: 2px solid rgba(17, 17, 17, 0.41);   
-    border-radius: 4px;
 }
 
 .link {
     color:black;
     text-transform: none;
 }
+
+#card:hover {
+    color: rgb(99, 91, 91);
+}
+
+/* @media screen and (min-width: 580px) {
+    .container {
+        grid-template-columns: 90vw;
+    }
+} */

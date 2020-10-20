@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Card } from '@material-ui/core';
+
 import './meetings.css';
 
 export default function Meetings() {
@@ -26,13 +28,13 @@ export default function Meetings() {
 
   return (
     <div className='container'>
-       { meetings.sort((a,b)=> a.startDate > b.startDate ? 1 : -1).map( (meeting, idx) => (
+       { meetings.sort((a, b) => a.startDate > b.startDate ? 1 : -1).map((meeting, idx) => (
          <Link style={linkStyle} key={idx} to={`/meeting/${meeting._id}`}>
-            <div className='meetings-box'>
+            <Card variant="outlined" className='card' id='card'>
               <p>Plats: {meeting.location}</p>
               <p>Aktivitet: {meeting.activity}</p>
               <p>Datum och tid: {meeting.startDate} - {meeting.endDate}</p>
-            </div>
+            </Card>
           </Link>
             )) }
     </div>
