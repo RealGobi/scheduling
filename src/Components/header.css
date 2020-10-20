@@ -22,3 +22,24 @@
 #button {
   margin-bottom: 5px;
 }
+
+
+@media screen and (max-width: 600px) {
+  .header {
+      width: 100vw;
+      margin: 0;
+      border-radius: 0;
+  }
+
+  .container-btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-btn Button {
+    transform: scale(.7);
+  }
+} 
