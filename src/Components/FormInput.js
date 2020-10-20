@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import './formInput.css';
 
 
-function FormInput({ lableInput, typeInput, onChangeInput, valueInput, pTag, classNamePTag }) {
+function FormInput({ lableInput, typeInput, onChangeInput, valueInput, pTag, classNamePTag, lableFor, id }) {
   return (
     <div>
-      <label>{ lableInput }</label>
+      <label htmlFor={lableFor}>{ lableInput }</label>
       {pTag && <p className={classNamePTag}>{pTag}</p>}
-      <input type={typeInput} onChange={onChangeInput} value={valueInput} />
+      <input id={id} type={typeInput} onChange={onChangeInput} value={valueInput} />
     </div>
   )
 }

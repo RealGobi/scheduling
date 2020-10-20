@@ -35,18 +35,24 @@ export default function AddMeeting() {
     <div className='add-meeting-box'>
       <form onSubmit={handleSubmit}>
         <FormInput 
+          id='location'
+          lableFor='location'
           lableInput='Plats:' 
           typeInput='text' 
           valueInput={location} 
           onChangeInput={e => setLocation(e.target.value)} 
           />
         <FormInput 
+          id='activity'
+          lableFor='activity'
           lableInput='Aktivitet:' 
           typeInput='text' 
           valueInput={activity} 
           onChangeInput={e => setActivity(e.target.value)} 
           />
         <FormInput 
+          id='startDate'
+          lableFor='startDate'
           lableInput='Startdatum och tid:' 
           pTag='(YYYY-MM-DD HH:MM)' 
           classNamePTag='date-info-text' 
@@ -55,6 +61,8 @@ export default function AddMeeting() {
           onChangeInput={e => setStartDate(e.target.value)} 
           />
         <FormInput 
+          id='endDate'
+          lableFor='endDate'
           lableInput='Slutdatum och tid:' 
           pTag='(YYYY-MM-DD HH:MM)' 
           classNamePTag='date-info-text' 
