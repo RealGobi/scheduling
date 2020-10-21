@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchData } from '../components/ApiCalls';
 import { Link } from 'react-router-dom';
-import { Card } from '@material-ui/core';
+import { Card, Grid, Box } from '@material-ui/core';
 
 import './meetings.css';
 
@@ -37,17 +37,19 @@ export default function Meetings() {
   calcOverlappingDates();
   
   return (
-    <div className='container'>
-       { meetings.concat(overlappingDates).sort((a, b) => a.startDate > b.startDate ? 1 : -1).map((meeting, idx) => (
-         <Link style={linkStyle} key={idx} to={`/meeting/${meeting._id}`}>
-            <Card variant="outlined" className='card' id='card'>
-              <p>Plats: {meeting.location}</p>
-              <p>Aktivitet: {meeting.activity}</p>
-              <p>Startdatum: {meeting.startDate}</p>
-              <p>Slutdatum: {meeting.endDate}</p>
-            </Card>
-          </Link>
-            )) }
-    </div>
+    <Grid container spacing={1}>
+      <Grid container justify = "center" item xs={12} spacing={3}>
+        { meetings.concat(overlappingDates).sort((a, b) => a.startDate > b.startDate ? 1 : -1).map((meeting, idx) => (
+          <Link style={linkStyle} key={idx} to={`/meeting/${meeting._id}`}>
+              <Card variant="outlined" className='card' id='card'>
+                <p>Plats: {meeting.location}</p>
+                <p>Aktivitet: {meeting.activity}</p>
+                <p>Startdatum: {meeting.startDate}</p>
+                <p>Slutdatum: {meeting.endDate}</p>
+              </Card>
+            </Link>
+          )) }
+        </Grid>
+    </Grid>
   )
 }
