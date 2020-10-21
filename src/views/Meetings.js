@@ -24,9 +24,21 @@ export default function Meetings() {
     color: '#111111'
   }
 
+  const overlappingDates = [];
+  const calcOverlappingDates = () => meetings.map(meeting => {
+    let date1 = new Date(meeting.startDate.substring(0,10));
+    let date2 = new Date(meeting.endDate.substring(0,10));
+    let result = date1.getTime() !== date2.getTime();
+    if(result === true){
+      overlappingDates.push(meeting)
+    } 
+    return overlappingDates;
+  })
+  calcOverlappingDates();
+  
   return (
     <div className='container'>
-       { meetings.sort((a, b) => a.startDate > b.startDate ? 1 : -1).map((meeting, idx) => (
+       { meetings.concat(overlappingDates).sort((a, b) => a.startDate > b.startDate ? 1 : -1).map((meeting, idx) => (
          <Link style={linkStyle} key={idx} to={`/meeting/${meeting._id}`}>
             <Card variant="outlined" className='card' id='card'>
               <p>Plats: {meeting.location}</p>
