@@ -10,6 +10,8 @@ import './formInput.css';
  * @param {string} typeInput Props passed down as a string, is Required. ex. 'text'
  * @param {func} onChangeInput Func to handle change, is Required. ex. e => setLocation
  * @param {string} valueInput Props passed down as a string, is Required. 
+ * @param {string} id Props passed down as a string, is Required. 
+ * @param {string} lableFor Props passed down as a string, is Required. 
  * @param {string} classNamePTag Props passed down as a string.
  * @param {string} pTag Props passed down as a string, ex. 'PS. Lorem DS'
  * */
@@ -30,6 +32,8 @@ FormInput.propTypes = {
   typeInput: PropTypes.string.isRequired,
   onChangeInput: PropTypes.func.isRequired,
   valueInput: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  lableFor: PropTypes.string.isRequired,
   classNamePTag: PropTypes.string,
   pTag: PropTypes.string
 };
