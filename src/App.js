@@ -7,18 +7,18 @@ import Header from './components/Header';
 import AddMeeting from './views/AddMeeting';
 
 function App() {
-  
+
   return (
     <Router>
       <div className="App">
         <Header className='header' />
         <Switch>
           <Route path='/' exact 
-          component={Meetings} />
+           component={Meetings} />
           <Route path='/meeting/:id' 
-          component={MeetingDetail} />
+           component={MeetingDetail} />
           <Route path='/add-meeting'
-          component={AddMeeting} />
+           component={AddMeeting} />
         </Switch>
       </div>
     </Router>

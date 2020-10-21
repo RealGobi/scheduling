@@ -11,6 +11,8 @@ export default function AddMeeting() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
+
+  // when submit get fired, send a POST req with data from  form to api.
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(location);
@@ -25,12 +27,16 @@ export default function AddMeeting() {
     })
   })
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => console.log(data));
+
+  // resets state
+
   setLocation('');
   setActivity('');
   setStartDate('');
   setEndDate('');
-  }
+  };
+  
   return (
     <div className='add-meeting-box'>
       <form onSubmit={handleSubmit}>

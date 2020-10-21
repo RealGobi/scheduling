@@ -12,17 +12,26 @@ export default function Meetings() {
 
   useEffect(() => {
     getData();
-  }, [])
+  }, []);
+
+  // getData calls fetchData from extern component and pass in url to fetch data
 
   const getData = async () =>{
     const data = await fetchData(url);
     setMeetings(data);
   }
 
+  // styles as an object
+
   const linkStyle = {
     textDecoration: "none",
     color: '#111111'
   }
+
+/* compare startDate and endDate, and if they aren't a match, 
+   push it in to overlappingDates array,
+   which in return(render) gets merge with meetings array 
+   to a new array and then get mapt out in UI */
 
   const overlappingDates = [];
   const calcOverlappingDates = () => meetings.map(meeting => {

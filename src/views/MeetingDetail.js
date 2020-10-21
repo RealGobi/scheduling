@@ -8,7 +8,7 @@ import './meetingDetail.css';
 
 export default function MeetingDetail({ match }) {
 
-// state 
+// state, hooks and const
 const [meetingDetails, setMeetingDeails] = useState({});
 
 const url = `https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list/${match.params.id}`;
@@ -29,7 +29,7 @@ const deleteClick = (id) => {
 fetch(`https://crudcrud.com/api/c974ef5540f34583aacee5422b10fc66/event-list/${id}`, {
     method: 'DELETE'
   })
-  .then(response => console.log(response))
+  .then(response => console.log(response));
   history.push("/"); 
 }
   
@@ -43,7 +43,7 @@ return (
   </Card>
   <Button fullWidth onClick={() => deleteClick(meetingDetails._id)}variant="contained" color="secondary">Delete</Button>
 </div>
-)}
+)};
 
 MeetingDetail.propTypes = {
 match: PropTypes.object

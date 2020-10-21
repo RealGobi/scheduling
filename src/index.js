@@ -6,6 +6,8 @@ import theme from './theme';
 
 import * as serviceWorker from './serviceWorker';
 
+// wrap App with ThemeProvider and pass in theme to get access all over 
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
