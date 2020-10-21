@@ -1,5 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
+// customize color palette for maretial UI
+
 const theme = createMuiTheme({
   palette: {
     primary: {
