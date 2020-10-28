@@ -10,12 +10,23 @@ import './formInput.css';
  * @param {string} typeInput Props passed down as a string, is Required. ex. 'text'
  * @param {func} onChangeInput Func to handle change, is Required. ex. e => setLocation
  * @param {string} valueInput Props passed down as a string, is Required. 
- * @param {string} id Props passed down as a string, is Required. 
+ * @param {string} id Props passed down as a number, is Required. 
  * @param {string} lableFor Props passed down as a string, is Required. 
  * @param {string} classNamePTag Props passed down as a string.
  * @param {string} pTag Props passed down as a string, ex. 'PS. Lorem DS'
  * */
-function FormInput({ lableInput, typeInput, onChangeInput, valueInput, pTag, classNamePTag, lableFor, id }) {
+function FormInput({ lableInput, typeInput, onChangeInput, valueInput, pTag, classNamePTag, lableFor, id }: {
+  lableInput: string;
+  typeInput: string;
+  onChangeInput: any;
+  valueInput: string;
+  pTag: string;
+  classNamePTag: string;
+  lableFor: string;
+  id: string;
+}) {
+  console.log(typeof id);
+  
   return (
     <div>
       <label htmlFor={lableFor}>{ lableInput }</label>
